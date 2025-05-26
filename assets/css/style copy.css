@@ -21,6 +21,7 @@
     hsl(240, 5%, 95%) 0%, 
     hsl(0, 0%, 90%) 100%
   );
+  /* Color for What I'm Doing card */
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
     hsla(240, 5%, 40%, 0.3) 0%, 
@@ -48,11 +49,11 @@
   );
 
   /* Solid color adjustments for a clean, modern, yet retro look */
-  --jet: hsl(0, 0%, 100%); /* White for minimalistic background */
+  --jet: hsl(0, 0%, 100%, 0.1); /* White for minimalistic background */
   --onyx: hsl(240, 7%, 15%); /* Darker for text */
   --eerie-black-1: hsl(240, 7%, 10%);
   --eerie-black-2: hsl(240, 7%, 8%);
-  --smoky-black: hsl(0, 0%, 5%); /* Almost black for depth */
+  --smoky-black: hsl(0, 0%, 5%); /* Background: Almost black for depth */
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
   --orange-yellow-crayola: hsl(45, 100%, 50%); /* Saturated for accents */
@@ -129,12 +130,18 @@ input, textarea {
   color: var(--smoky-black);
 }
 
-:focus { outline-color: var(--orange-yellow-crayola); }
+:focus { outline-color: var(--orange-yellow-crayola); } /*color of contact icon*/
 
 html { font-family: var(--ff-poppins); }
 
 body { background: var(--smoky-black); }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
 
 
 
@@ -151,6 +158,7 @@ article {
   padding: 15px;
   box-shadow: var(--shadow-1);
   z-index: 1;
+  backdrop-filter: blur(10px); /* Added for better readability */
 }
 
 .separator {
@@ -252,26 +260,58 @@ article.active {
 
 .content-card {
   position: relative;
-  background: var(--border-gradient-onyx);
+  background: rgba(30, 30, 35, 0.7); /* Adjusted for transparency */
   padding: 15px;
   padding-top: 45px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   cursor: pointer;
   z-index: 1;
+  backdrop-filter: blur(5px); /* Added for better readability */
 }
 
 .content-card::before {
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--bg-gradient-jet);
+  background: rgba(40, 40, 45, 0.6); /* Adjusted for transparency */
   border-radius: inherit;
   z-index: -1;
 }
 
 
 
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#myVideo {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  overflow-y: auto;
+  /* Add any additional styling for your content wrapper */
+}
+
+/* Add your other styles for header, main, footer, etc. here */
 
 
 /*-----------------------------------*\
@@ -444,7 +484,6 @@ main {
   box-shadow: var(--shadow-2);
   z-index: 5;
 }
-
 .navbar-list {
   display: flex;
   flex-wrap: wrap;
@@ -502,7 +541,7 @@ main {
 
 .service-item {
   position: relative;
-  background: var(--border-gradient-onyx);
+
   padding: 20px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
@@ -840,9 +879,40 @@ main {
 }
 
 .skill-progress-fill {
-  background: var(--text-gradient-yellow);
+  background: var(--bg-gradient-yellow-1);
   height: 100%;
   border-radius: inherit;
+  transition: var(--transition-1);
+}
+
+/* Download CV Button Styles */
+.download-cv {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.cv-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-gradient-yellow-1);
+  color: var(--smoky-black);
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: var(--fw-500);
+  transition: var(--transition-1);
+  box-shadow: var(--shadow-1);
+}
+
+.cv-button:hover {
+  background: var(--bg-gradient-yellow-2);
+  transform: translateY(-2px);
+}
+
+.cv-button ion-icon {
+  font-size: 20px;
 }
 
 
@@ -1266,11 +1336,16 @@ textarea.form-input::-webkit-resizer { display: none; }
    * #REUSED STYLE
    */
 
-  .sidebar, article {
-    width: 520px;
-    margin-inline: auto;
-    padding: 30px;
-  }
+   .sidebar,
+   article {
+     background: rgba(20, 20, 25, 0.8); /* Adjusted for transparency */
+     border: 1px solid var(--jet);
+     border-radius: 20px;
+     padding: 15px;
+     box-shadow: var(--shadow-1);
+     z-index: 1;
+     backdrop-filter: blur(10px); /* Added for better readability */
+   }
 
   .article-title {
     font-weight: var(--fw-600);
