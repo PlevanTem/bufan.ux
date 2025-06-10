@@ -24,9 +24,10 @@
   /* Color for What I'm Doing card */
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
-    hsla(240, 5%, 40%, 0.3) 0%, 
-    hsla(240, 5%, 30%, 0) 100%
-  ), hsl(240, 5%, 30%);
+    rgba(255, 255, 255, 0.2) 0%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    rgba(255, 255, 255, 0) 100%
+  ), rgba(255, 255, 255, 0.1);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
     hsl(45, 90%, 58%) 0%, 
@@ -47,7 +48,6 @@
     hsl(45, 100%, 50%), 
     hsl(35, 100%, 45%)
   );
-
   /* Solid color adjustments for a clean, modern, yet retro look */
   --jet: hsl(0, 0%, 100%, 0.1); /* White for minimalistic background */
   --onyx: hsl(240, 7%, 15%); /* Darker for text */
