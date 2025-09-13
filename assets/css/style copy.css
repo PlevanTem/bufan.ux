@@ -176,24 +176,50 @@ article {
   box-shadow: 
     0 0 0 1px rgba(255, 255, 255, 0.2) inset, /* 内高光，模拟玻璃内侧反光 */
     0 4px 12px rgba(0, 0, 0, 0.15); /* 外阴影，增强立体层次（低 opacity 避免沉重） */
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
-  color: var(--orange-yellow-crayola);
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8); /* 图标半透明浅色，增强通透感 */
   z-index: 1;
+  backdrop-filter: blur(12px); /* 模糊下层背景，增强玻璃感 */
 }
 
 .icon-box::before {
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--eerie-black-1);
+  background: transparent;
   border-radius: inherit;
   z-index: -1;
+}
+
+.icon-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -20%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(69, 69, 69, 0.15),
+    transparent
+  );
+  -webkit-tap-highlight-color: transparent;
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.icon-box:hover {
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .icon-box ion-icon { --ionicon-stroke-width: 35px; }
@@ -1374,13 +1400,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .article-title::after {
     width: 40px;
     height: 5px;
-  }
-
-  .icon-box {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    font-size: 18px;
   }
 
 
