@@ -87,6 +87,10 @@
   /* Smooth transitions for interactive elements */
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
+
+  /* Liquid Glass Effect */
+  --color-black: #000;
+  --color-white: #fff;
 }
 
 
@@ -168,7 +172,10 @@ article {
 
 .icon-box {
   position: relative;
-  background: var(--border-gradient-onyx);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* 轻微透明边框，增强边缘界定 */
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset, /* 内高光，模拟玻璃内侧反光 */
+    0 4px 12px rgba(0, 0, 0, 0.15); /* 外阴影，增强立体层次（低 opacity 避免沉重） */
   width: 30px;
   height: 30px;
   border-radius: 8px;
@@ -177,7 +184,6 @@ article {
   align-items: center;
   font-size: 16px;
   color: var(--orange-yellow-crayola);
-  box-shadow: var(--shadow-1);
   z-index: 1;
 }
 
@@ -539,20 +545,54 @@ main {
 
 .service-item {
   position: relative;
-
   padding: 20px;
-  border-radius: 14px;
+  border: 1px solid color-mix(in oklab, var(--color-white) 20%, transparent); /* text-black/90：黑色90%不透明度 */
+  border-radius: 28px;
   box-shadow: var(--shadow-2);
+  backdrop-filter: blur(12px); /* 模糊下层背景，增强玻璃感 */
+  -webkit-backdrop-filter: blur(12px); /* 兼容 Safari */
+  box-shadow: 0 4px 20px color-mix(in oklab, var(--color-black) 15%, transparent); /* 轻微阴影，区分层级 */
   z-index: 1;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .service-item::before {
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--bg-gradient-jet);
   border-radius: inherit;
   z-index: -1;
+}
+
+.service-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  -webkit-tap-highlight-color: transparent;
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.service-item:hover::after {
+  left: 100%;
+}
+
+.service-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .service-icon-box { margin-bottom: 10px; }
@@ -564,16 +604,13 @@ main {
 .service-item-title { margin-bottom: 7px; }
 
 .service-item-text {
-  color: var(--light-gray);
+  color: color-mix(in oklab, var(--color-white) 90%, transparent); /* dark:text-white/90 */
   font-size: var(--fs-6);
-  font-weight: var(--fw-3);
+  font-weight: var(--fw-300);
   line-height: 1.6;
 }
 
-
-/**
- * #testimonials 
- */
+/* testimonials */
 
 .testimonials { margin-bottom: 30px; }
 
