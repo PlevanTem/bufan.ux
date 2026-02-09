@@ -18,759 +18,786 @@
   <link rel="stylesheet" href="./assets/css/style copy.css">
 
   <!--
-    - google font link
+    - geist font links (Pixel, Sans, Mono)
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Geist Sans for fallback -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Geist Pixel via CDN (Latest) -->
+  <link href="https://cdn.jsdelivr.net/npm/geist@latest/dist/fonts/geist-pixel/GeistPixelSquare-Regular.woff2" as="font"
+    type="font/woff2" crossorigin>
+
+  <style>
+    @font-face {
+      font-family: 'Geist Pixel Square';
+      src: url('https://cdn.jsdelivr.net/npm/geist@latest/dist/fonts/geist-pixel/GeistPixelSquare-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
 </head>
 
 <body>
   <div class="video-background">
     <video autoplay muted loop id="myVideo">
       <source src="assets/video/nihao_welcome.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+      Your browser does not support the video tag.
     </video>
-</div>
+  </div>
   <!--
     - #MAIN
   -->
   <div class="content-wrapper">
     <main>
 
-    <!--
+      <!--
       - #SIDEBAR
     -->
 
-    <aside class="sidebar" data-sidebar>
+      <aside class="sidebar" data-sidebar>
 
-      <div class="sidebar-info">
+        <div class="sidebar-info">
 
-        <figure class="avatar-box">
-          <img src="./assets/images/avatar2.gif" alt="Bufan Deng" width="80" class="rounded-image">
-        </figure>
+          <figure class="avatar-box">
+            <img src="./assets/images/avatar2.gif" alt="Bufan Deng" width="80" class="rounded-image">
+          </figure>
 
-        <div class="info-content">
-          <h1 class="name" title="Bufan Deng">Bufan Deng</h1>
+          <div class="info-content">
+            <h1 class="name" title="Bufan Deng">Bufan Deng</h1>
 
-          <p class="title">Life without Limits.</p>
+            <p class="title">Life without Limits.</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+        <div class="sidebar-info_more">
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+          <div class="separator"></div>
 
-      </div>
+          <ul class="contacts-list">
 
-      <div class="sidebar-info_more">
+            <li class="contact-item">
 
-        <div class="separator"></div>
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
 
-        <ul class="contacts-list">
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
 
-          <li class="contact-item">
+                <a href="mailto:plevantem@gmail.com" class="contact-link">plevantem@gmail.com</a>
+              </div>
 
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
+            </li>
 
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
+            <li class="contact-item">
 
-              <a href="mailto:plevantem@gmail.com" class="contact-link">plevantem@gmail.com</a>
-            </div>
+              <div class="icon-box">
+                <ion-icon name="logo-wechat"></ion-icon>
+              </div>
 
-          </li>
+              <div class="contact-info">
+                <p class="contact-title">WeChat</p>
 
-          <li class="contact-item">
+                <a href="" class="contact-link">lelouchdbf</a>
+              </div>
 
-            <div class="icon-box">
-              <ion-icon name="logo-wechat"></ion-icon>
-            </div>
+            </li>
 
-            <div class="contact-info">
-              <p class="contact-title">WeChat</p>
+            <li class="contact-item">
 
-              <a href="" class="contact-link">lelouchdbf</a>
-            </div>
+              <div class="icon-box">
+                <ion-icon name="body-outline"></ion-icon>
+              </div>
 
-          </li>
+              <div class="contact-info">
+                <p class="contact-title">MBTI</p>
 
-          <li class="contact-item">
+                <time datetime="1982-06-23">ENTJ</time>
+              </div>
 
-            <div class="icon-box">
-              <ion-icon name="body-outline"></ion-icon>
-            </div>
+            </li>
 
-            <div class="contact-info">
-              <p class="contact-title">MBTI</p>
+            <li class="contact-item">
 
-              <time datetime="1982-06-23">ENTJ</time>
-            </div>
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
 
-          </li>
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
 
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address><a href="https://www.google.com/search?q=shenzhen+china" class="contact-link" target="_blank"">SHENZHEN, CHINA</a></address>
+                <address><a href="https://www.google.com/search?q=shenzhen+china" class="contact-link" target="_blank"">SHENZHEN, CHINA</a></address>
             </div>
 
           </li>
 
         </ul>
 
-        <div class="separator"></div>
+        <div class=" separator">
+              </div>
 
-        <ul class="social-list">
+              <ul class="social-list">
 
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/bufan-deng-67772715b/" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
+                <li class="social-item">
+                  <a href="https://www.linkedin.com/in/bufan-deng-67772715b/" class="social-link">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
 
-          <li class="social-item">
-            <a href="https://twitter.com/BufanDeng" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
+                <li class="social-item">
+                  <a href="https://twitter.com/BufanDeng" class="social-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
 
-          <li class="social-item">
-            <a href="https://www.instagram.com/thegreatdbf/" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
+                <li class="social-item">
+                  <a href="https://www.instagram.com/thegreatdbf/" class="social-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
 
-        </ul>
+              </ul>
 
-      </div>
+        </div>
 
-    </aside>
-
-
-
+      </aside>
 
 
-    <!--
+
+
+
+      <!--
       - #main-content
     -->
 
-    <div class="main-content">
+      <div class="main-content">
 
-      <!--
+        <!--
         - #NAVBAR
       -->
 
-      <nav class="navbar">
+        <nav class="navbar">
 
-        <ul class="navbar-list">
+          <ul class="navbar-list">
 
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
+            <li class="navbar-item">
+              <button class="navbar-link  active" data-nav-link>About</button>
+            </li>
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Portfolio</button>
+            </li>
 
-          <li class="navbar-item">
-            <button class="navbar-link"><a style="text-decoration:none; color:white" href="https://plevantem.github.io/bufan.blog/" target="_blank" rel="noopener noreferrer">🔗Blog</a></button>
-          </li>
+            <li class="navbar-item">
+              <button class="navbar-link"><a style="text-decoration:none; color:white"
+                  href="https://plevantem.github.io/bufan.blog/" target="_blank"
+                  rel="noopener noreferrer">🔗Blog</a></button>
+            </li>
 
-        </ul>
+          </ul>
 
-      </nav>
-
-
+        </nav>
 
 
 
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Hi, I'm Bufan, aiming to be a TBD(Tech×Business×Design) designer. <!--Currently working on building AI-driven design tools and community at Huawei.-->
-          </p>
-          
-          <p>
-            I believe tech for good and technology should be used in a human-centered way, which means 
-            our solutions should be used to augment human creativity rather than harm our society.
-            Now I'm committed to deliver intelligent and sustainable computing design solutions 
-            to support business with my greatest ability to empathize, analyze and design.
-          </p>
-        </section>
 
 
         <!--
+        - #ABOUT
+      -->
+
+        <article class="about active" data-page="about">
+
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
+
+          <section class="about-text">
+            <p>
+              Hi, I'm Bufan, aiming to be a TBD(Tech×Business×Design) designer.
+              <!--Currently working on building AI-driven design tools and community at Huawei.-->
+            </p>
+
+            <p>
+              I believe tech for good and technology should be used in a human-centered way, which means
+              our solutions should be used to augment human creativity rather than harm our society.
+              Now I'm committed to deliver intelligent and sustainable computing design solutions
+              to support business with my greatest ability to empathize, analyze and design.
+            </p>
+          </section>
+
+
+          <!--
           - service
         -->
 
-        <section class="service">
+          <section class="service">
 
-          <h3 class="h3 service-title">What I'm doing</h3>
+            <h3 class="h3 service-title">What I'm doing</h3>
 
-          <ul class="service-list">
+            <ul class="service-list">
 
-            <li class="service-item">
+              <li class="service-item">
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-design.svg
                 " alt="design icon" width="40">
-              </div>
+                </div>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">UX design</h4>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">UX design</h4>
 
-                <p class="service-item-text">
-                  "Dive into user needs"
-                </p>
-              </div>
+                  <p class="service-item-text">
+                    "Dive into user needs"
+                  </p>
+                </div>
 
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">AI enthusiast</h4>
-
-                <p class="service-item-text">
-                  "Of the data, by the people, for the people."
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Vibe Coding</h4>
-
-                <p class="service-item-text">
-                  "LLM-driven🤣. Code for Fun."
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Travel</h4>
-
-                <p class="service-item-text">
-                   "Best way to feel the beauty of existence."
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-        <!--  testimonials modal 
-          -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-        
-        </div>
-    
-      </article>
-      
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="download-cv">
-          <a href="https://bomcxsvrs0.feishu.cn/file/OT7jbtE3NoVJqdxAaMecOegln9f?from=from_copylink" target="_blank" class="cv-button">
-            <ion-icon name="download-outline"></ion-icon>
-            <span>Download CV</span>
-          </a>
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="desktop-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Product Designer, Huawei Ltd., Shenzhen</h4>
-
-              <span>2023 — Present</span>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">UX Designer, DANSIC, Copenhagen</h4>
-
-              <span>2022 — 2023</span>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Technical University of Denmark</h4>
-
-              <span>2021 — 2023</span>
-
-              <p class="timeline-text">
-                MSc of Human-centered Artificial Intelligence.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">KTH Royal Instituition of Technology</h4>
-
-              <span>2022 — 2023</span>
-
-              <p class="timeline-text">
-                Interactive Media Technology (Erasmus+ exchange)
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Hangzhou Dianzi University</h4>
-
-              <span>2017 — 2021</span>
-
-              <p class="timeline-text">
-                BBA of Information Management and Information Systems
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="trophy-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Awards or Publications</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title" href="">"Centralized or Decentralized?": 
-                Concerns and Value Judgments of Stakeholders in the Non-Fungible Tokens (NFTs) Market, CSCW 2024
-              </h4>
-
-              <span>2023 — Present</span>
-
-              <p class="timeline-text">
-                Preprint version: https://arxiv.org/abs/2311.10990
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4><a class="h4 timeline-item-title" href="https://ux-design-awards.com/winners/2023-2-mindspace-level-up-your-emotional-resilience">
-                2023 UX Award Nominated: MindSpace: Level Up Your Emotional Resilience</a></h4>
-
-              <span>2022 — 2023</span>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">UX design</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Data Analysis</h5>
-                <data value="60">60%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Machine Learning</h5>
-                <data value="60">60%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Prompt Engineering</h5>
-                <data value="40">40%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 40%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>UX Design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Data Analysis</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>ML / AI</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
               </li>
 
-              <li class="select-item">
-                <button data-select-item>UX Design</button>
+              <li class="service-item">
+
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">AI enthusiast</h4>
+
+                  <p class="service-item-text">
+                    "Of the data, by the people, for the people."
+                  </p>
+                </div>
+
               </li>
 
-              <li class="select-item">
-                <button data-select-item>Data Analysis</button>
+              <li class="service-item">
+
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Vibe Coding</h4>
+
+                  <p class="service-item-text">
+                    "LLM-driven🤣. Code for Fun."
+                  </p>
+                </div>
+
               </li>
 
-              <li class="select-item">
-                <button data-select-item>ML / AI</button>
+              <li class="service-item">
+
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Travel</h4>
+
+                  <p class="service-item-text">
+                    "Best way to feel the beauty of existence."
+                  </p>
+                </div>
+
               </li>
 
             </ul>
 
+          </section>
+          <!--  testimonials modal 
+          -->
+
+          <div class="modal-container" data-modal-container>
+
+            <div class="overlay" data-overlay></div>
+
+            <section class="testimonials-modal">
+
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+                </figure>
+
+                <img src="./assets/images/icon-quote.svg" alt="quote icon">
+              </div>
+
+              <div class="modal-content">
+
+                <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+                <time datetime="2021-06-14">14 June, 2021</time>
+
+                <div data-modal-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+
+            </section>
+
           </div>
 
-          <ul class="project-list">
-
-            <li class="project-item  active" data-category="UX Design">
-              <a href="https://big-chemistry-fe2.notion.site/MindSpace-level-Up-Your-Emotional-Resilience-e5009ec0aa024f13b35137ef255a9ec5?pvs=143" target="_blank" rel="noopener noreferrer">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.webp" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MindSpace: Level Up Your Emotional Resilience</h3>
-
-                <p class="project-category">UX Design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-category="UX Design">
-              <a href="https://big-chemistry-fe2.notion.site/Wake-Up-Dialect-Story-grandparents-and-grandchild-dialect-dubbing-game-3337cc2f14544594aafa9e37445f5a57?pvs=143" target="_blank" rel="noopener noreferrer">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.webp" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">WakeUp Story: Wu Dialet Practice</h3>
-
-                <p class="project-category">UX design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-category="Data Analysis">
-              <a href="https://www.student.dtu.dk/~s212400/index.html#About" target="_blank" rel="noopener noreferrer">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.webp" alt="LOL Champion Network" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">LOL Champion Network Analysis</h3>
-
-                <p class="project-category">Data Analysis</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-category="UX Design">
-              <a href="https://big-chemistry-fe2.notion.site/Miles-every-milestone-deserves-a-celebration-3d8ed677ba89464390768bf596a6bec0?pvs=143" target="_blank" rel="noopener noreferrer">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.webp" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Miles: Funny Team Motivator</h3>
-
-                <p class="project-category">UX design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="UX Design">
-              <a href="https://big-chemistry-fe2.notion.site/FlowerGrow-a-gamified-hydration-reminder-c138f31a30714c9cb44908c8962cf73b?pvs=143" target="_blank" rel="noopener noreferrer">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/portfolio-5.webp" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">FlowerGrow: hydration tracker</h3>
-
-                <p class="project-category">UX Design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="ML / AI">
-              <a href="https://big-chemistry-fe2.notion.site/A-Convolutional-Neural-Network-model-tells-your-face-age-b08718863c274c7cbc81d1ad5ccda6a6?pvs=143" target="_blank" rel="noopener noreferrer">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.webp" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Detect Your Facial Age</h3>
-
-                <p class="project-category">ML / AI</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="UX Design">
-              <a href="https://big-chemistry-fe2.notion.site/REAFEL-A-Wearable-Scheme-to-Optimize-Atrial-Fibrillation-Diagnosis-for-Patients-and-Clinicians-34876982ba2841f7b26cf4c807aa4e87?pvs=143" target="_blank" rel="noopener noreferrer">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.webp" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">REAFEL: Wearable AFib Monitor</h3>
-
-                <p class="project-category">UX Design</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
+        </article>
 
 
+        <!--
+        - #RESUME
+      -->
+
+        <article class="resume" data-page="resume">
+
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
+
+          <section class="download-cv">
+            <a href="https://bomcxsvrs0.feishu.cn/file/OT7jbtE3NoVJqdxAaMecOegln9f?from=from_copylink" target="_blank"
+              class="cv-button">
+              <ion-icon name="download-outline"></ion-icon>
+              <span>Download CV</span>
+            </a>
+          </section>
+
+          <section class="timeline">
+
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="desktop-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Experience</h3>
+            </div>
+
+            <ol class="timeline-list">
+
+              <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">Product Designer, Huawei Ltd., Shenzhen</h4>
+
+                <span>2023 — Present</span>
+
+              </li>
+
+              <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">UX Designer, DANSIC, Copenhagen</h4>
+
+                <span>2022 — 2023</span>
+
+              </li>
+
+            </ol>
+
+          </section>
+
+          <section class="timeline">
+
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Education</h3>
+            </div>
+
+            <ol class="timeline-list">
+
+              <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">Technical University of Denmark</h4>
+
+                <span>2021 — 2023</span>
+
+                <p class="timeline-text">
+                  MSc of Human-centered Artificial Intelligence.
+                </p>
+
+              </li>
+
+              <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">KTH Royal Instituition of Technology</h4>
+
+                <span>2022 — 2023</span>
+
+                <p class="timeline-text">
+                  Interactive Media Technology (Erasmus+ exchange)
+                </p>
+
+              </li>
+
+              <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">Hangzhou Dianzi University</h4>
+
+                <span>2017 — 2021</span>
+
+                <p class="timeline-text">
+                  BBA of Information Management and Information Systems
+                </p>
+
+              </li>
+
+            </ol>
+
+          </section>
+
+          <section class="timeline">
+
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="trophy-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Awards or Publications</h3>
+            </div>
+
+            <ol class="timeline-list">
+
+              <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title" href="">"Centralized or Decentralized?":
+                  Concerns and Value Judgments of Stakeholders in the Non-Fungible Tokens (NFTs) Market, CSCW 2024
+                </h4>
+
+                <span>2023 — Present</span>
+
+                <p class="timeline-text">
+                  Preprint version: https://arxiv.org/abs/2311.10990
+                </p>
+
+              </li>
+
+              <li class="timeline-item">
+
+                <h4><a class="h4 timeline-item-title"
+                    href="https://ux-design-awards.com/winners/2023-2-mindspace-level-up-your-emotional-resilience">
+                    2023 UX Award Nominated: MindSpace: Level Up Your Emotional Resilience</a></h4>
+
+                <span>2022 — 2023</span>
+
+              </li>
+
+            </ol>
+
+          </section>
+
+          <section class="skill">
+
+            <h3 class="h3 skills-title">My skills</h3>
+
+            <ul class="skills-list content-card">
+
+              <li class="skills-item">
+
+                <div class="title-wrapper">
+                  <h5 class="h5">UX design</h5>
+                  <data value="80">80%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%;"></div>
+                </div>
+
+              </li>
+
+              <li class="skills-item">
+
+                <div class="title-wrapper">
+                  <h5 class="h5">Data Analysis</h5>
+                  <data value="60">60%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 60%;"></div>
+                </div>
+
+              </li>
+
+              <li class="skills-item">
+
+                <div class="title-wrapper">
+                  <h5 class="h5">Machine Learning</h5>
+                  <data value="60">60%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 60%;"></div>
+                </div>
+
+              </li>
+
+              <li class="skills-item">
+
+                <div class="title-wrapper">
+                  <h5 class="h5">Prompt Engineering</h5>
+                  <data value="40">40%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 40%;"></div>
+                </div>
+
+              </li>
+
+            </ul>
+
+          </section>
+
+        </article>
 
 
 
-      <!--
+
+        <!--
+        - #PORTFOLIO
+      -->
+
+        <article class="portfolio" data-page="portfolio">
+
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
+
+          <section class="projects">
+
+            <ul class="filter-list">
+
+              <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>UX Design</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Data Analysis</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>ML / AI</button>
+              </li>
+
+            </ul>
+
+            <div class="filter-select-box">
+
+              <button class="filter-select" data-select>
+
+                <div class="select-value" data-selecct-value>Select category</div>
+
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+
+              </button>
+
+              <ul class="select-list">
+
+                <li class="select-item">
+                  <button data-select-item>All</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>UX Design</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Data Analysis</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>ML / AI</button>
+                </li>
+
+              </ul>
+
+            </div>
+
+            <ul class="project-list">
+
+              <li class="project-item  active" data-category="UX Design">
+                <a href="https://big-chemistry-fe2.notion.site/MindSpace-level-Up-Your-Emotional-Resilience-e5009ec0aa024f13b35137ef255a9ec5?pvs=143"
+                  target="_blank" rel="noopener noreferrer">
+
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img src="./assets/images/project-1.webp" alt="finance" loading="lazy">
+                  </figure>
+
+                  <h3 class="project-title">MindSpace: Level Up Your Emotional Resilience</h3>
+
+                  <p class="project-category">UX Design</p>
+
+                </a>
+              </li>
+
+              <li class="project-item  active" data-category="UX Design">
+                <a href="https://big-chemistry-fe2.notion.site/Wake-Up-Dialect-Story-grandparents-and-grandchild-dialect-dubbing-game-3337cc2f14544594aafa9e37445f5a57?pvs=143"
+                  target="_blank" rel="noopener noreferrer">
+
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img src="./assets/images/project-2.webp" alt="fundo" loading="lazy">
+                  </figure>
+
+                  <h3 class="project-title">WakeUp Story: Wu Dialet Practice</h3>
+
+                  <p class="project-category">UX design</p>
+
+                </a>
+              </li>
+
+              <li class="project-item  active" data-category="Data Analysis">
+                <a href="https://www.student.dtu.dk/~s212400/index.html#About" target="_blank"
+                  rel="noopener noreferrer">
+
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img src="./assets/images/project-3.webp" alt="LOL Champion Network" loading="lazy">
+                  </figure>
+
+                  <h3 class="project-title">LOL Champion Network Analysis</h3>
+
+                  <p class="project-category">Data Analysis</p>
+
+                </a>
+              </li>
+
+              <li class="project-item  active" data-category="UX Design">
+                <a href="https://big-chemistry-fe2.notion.site/Miles-every-milestone-deserves-a-celebration-3d8ed677ba89464390768bf596a6bec0?pvs=143"
+                  target="_blank" rel="noopener noreferrer">
+
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img src="./assets/images/project-4.webp" alt="dsm." loading="lazy">
+                  </figure>
+
+                  <h3 class="project-title">Miles: Funny Team Motivator</h3>
+
+                  <p class="project-category">UX design</p>
+
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="UX Design">
+                <a href="https://big-chemistry-fe2.notion.site/FlowerGrow-a-gamified-hydration-reminder-c138f31a30714c9cb44908c8962cf73b?pvs=143"
+                  target="_blank" rel="noopener noreferrer">
+
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img src="./assets/images/portfolio-5.webp" alt="metaspark" loading="lazy">
+                  </figure>
+
+                  <h3 class="project-title">FlowerGrow: hydration tracker</h3>
+
+                  <p class="project-category">UX Design</p>
+
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="ML / AI">
+                <a href="https://big-chemistry-fe2.notion.site/A-Convolutional-Neural-Network-model-tells-your-face-age-b08718863c274c7cbc81d1ad5ccda6a6?pvs=143"
+                  target="_blank" rel="noopener noreferrer">
+
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img src="./assets/images/project-6.webp" alt="summary" loading="lazy">
+                  </figure>
+
+                  <h3 class="project-title">Detect Your Facial Age</h3>
+
+                  <p class="project-category">ML / AI</p>
+
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="UX Design">
+                <a href="https://big-chemistry-fe2.notion.site/REAFEL-A-Wearable-Scheme-to-Optimize-Atrial-Fibrillation-Diagnosis-for-Patients-and-Clinicians-34876982ba2841f7b26cf4c807aa4e87?pvs=143"
+                  target="_blank" rel="noopener noreferrer">
+
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img src="./assets/images/project-5.webp" alt="summary" loading="lazy">
+                  </figure>
+
+                  <h3 class="project-title">REAFEL: Wearable AFib Monitor</h3>
+
+                  <p class="project-category">UX Design</p>
+
+                </a>
+              </li>
+
+            </ul>
+
+          </section>
+
+        </article>
+
+
+
+
+
+        <!--
         - #BLOG
       -->
 
-      <article class="blog" data-page="blog">
+        <article class="blog" data-page="blog">
 
-        <header>
-          <h2 class="h2 article-title">Knowledge Base</h2>
-        </header>
+          <header>
+            <h2 class="h2 article-title">Knowledge Base</h2>
+          </header>
 
 
-      </article>
+        </article>
 
-    </div>
+      </div>
 
     </main>
   </div>
